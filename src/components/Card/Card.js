@@ -4,7 +4,7 @@ import typeColors from "../../helpers/typeColors";
 
 function Card({ pokemon }) {
   return (
-    <div className="Card">
+    <div  className="Card">
       <div className="Card__img">
         <img src={pokemon.sprites.front_default} alt="" />
       </div>
@@ -13,6 +13,7 @@ function Card({ pokemon }) {
         {pokemon.types.map((type) => {
           return (
             <div
+              key={type.type.name}
               className="Card__type"
               style={{ backgroundColor: typeColors[type.type.name] }}
             >
